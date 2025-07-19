@@ -2,8 +2,9 @@
 #include <iostream>
 using namespace std;
 
-void swap(int arr[], int size) 
+void trailing(int arr[], int size) 
 {
+    int count;
     int pos = 0;
     for(int i = 0; i < size; i++)
     {
@@ -20,12 +21,15 @@ void swap(int arr[], int size)
     for(int i = pos; i < size; i++)
     {
         arr[i] = 0;
+        count++;
     }
-    cout << "Array after swapping: ";
+    cout << "Array after trailing all zero: ";
     for(int i = 0; i < size; i++)
     {
         cout << arr[i] << " ";
     }
+    cout<<endl;
+    cout<<"total zeroes:"<<count<<endl;
     
 }
 
@@ -40,7 +44,7 @@ int main()
     {
         cin >> arr[i];
     }
-    swap(arr, size);
+    trailing(arr, size);
     
     return 0;
 }
